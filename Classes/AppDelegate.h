@@ -34,6 +34,10 @@ public:
     @param  the pointer of the application
     */
     virtual void applicationWillEnterForeground();
+
+  protected:
+       /// Create the window, set its size and other initialization
+       void createWindow();
 };
 
 #endif // _APP_DELEGATE_H_

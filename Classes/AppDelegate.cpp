@@ -3,11 +3,15 @@
 
 USING_NS_CC;
 
-AppDelegate::AppDelegate() {
+#define PLATFORM_PC ((CC_TARGET_PLATFORM == CC_PLATFORM_WIN32) || (CC_TARGET_PLATFORM == CC_PLATFORM_MAC) || (CC_TARGET_PLATFORM == CC_PLATFORM_LINUX))
+#define PLATFORM_MOBILE ((CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID) || (CC_TARGET_PLATFORM == CC_PLATFORM_IOS) || (CC_TARGET_PLATFORM == CC_PLATFORM_WP8))
 
+
+AppDelegate::AppDelegate()
+{
 }
 
-AppDelegate::~AppDelegate() 
+AppDelegate::~AppDelegate()
 {
 }
 
@@ -25,17 +29,17 @@ void AppDelegate::initGLContextAttrs()
 bool AppDelegate::applicationDidFinishLaunching() {
     // initialize director
     auto director = Director::getInstance();
-    auto glview = director->getOpenGLView();
-    if(!glview) {
-        glview = GLViewImpl::create("My Game");
-        director->setOpenGLView(glview);
-    }
 
-    // turn on display FPS
+	// Create and init the game window
+	createWindow();
+
+#if (COCOS2D_DEBUG == 1)
+    // turn on display FPS only in debug mode
     director->setDisplayStats(true);
+#endif
 
     // set FPS. the default value is 1.0/60 if you don't call this
-    director->setAnimationInterval(1.0 / 60);
+    director->setAnimationInterval(1.0 / 60.0);
 
     // create a scene. it's an autorelease object
     auto scene = HelloWorld::createScene();
@@ -61,3 +65,28 @@ void AppDelegate::applicationWillEnterForeground() {
     // if you use SimpleAudioEngine, it must resume here
     // SimpleAudioEngine::getInstance()->resumeBackgroundMusic();
 }
+
+void AppDelegate::createWindow()
+{
+       auto director = Director::getInstance();
+       auto window = director->getOpenGLView();
+
+       // If running on mobile device, window exists, on PC it is created
+       if( ! window )
+       {
+               window = GLView::create("bointer++");
+               director->setOpenGLView(window);
+       }
+
+       window->setDesignResolutionSize(1024, 768, ResolutionPolicy::NO_BORDER);
+
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS )
+       // If it is running on iPad HD, indicate our graphics are designed for HD
+       if ( window->getFrameSize().height > 768 )
+               director->setContentScaleFactor(2);
+#endif
+
+#if PLATFORM_PC
+       // We can change window size on PC. On mobile devices we keep the default frame size
+       window->setFrameSize(1024, 768);
+#endif
