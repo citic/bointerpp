@@ -74,7 +74,7 @@ void AppDelegate::createWindow()
        // If running on mobile device, window exists, on PC it is created
        if( ! window )
        {
-               window = GLView::create("bointer++");
+               window = GLViewImpl::create("bointer++");
                director->setOpenGLView(window);
        }
 
@@ -90,3 +90,4 @@ void AppDelegate::createWindow()
        // We can change window size on PC. On mobile devices we keep the default frame size
        window->setFrameSize(1024, 768);
 #endif
+}
