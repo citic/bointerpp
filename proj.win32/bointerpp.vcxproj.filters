@@ -18,6 +18,9 @@
     <ClCompile Include="..\src\AppDelegate.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\BaseScene.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
     <ClCompile Include="..\src\HelloWorldScene.cpp">
       <Filter>src</Filter>
     </ClCompile>
@@ -27,6 +30,12 @@
       <Filter>win32</Filter>
     </ClInclude>
     <ClInclude Include="..\src\AppDelegate.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Common.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\BaseScene.h">
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\src\HelloWorldScene.h">
