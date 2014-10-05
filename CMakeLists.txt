@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.8)
 
-set(APP_NAME MyGame)
+set(APP_NAME bointerpp)
 project (${APP_NAME})
 
 include(cocos2d/build/BuildHelpers.CMakeLists.txt)
@@ -129,6 +129,7 @@ include_directories(
   ${COCOS2D_ROOT}/external/webp/include/linux
   ${COCOS2D_ROOT}/external/tinyxml2
   ${COCOS2D_ROOT}/external/unzip
+  ${COCOS2D_ROOT}/external/chipmunk/include/chipmunk
   ${COCOS2D_ROOT}/external/freetype2/include/linux
   ${COCOS2D_ROOT}/external/websockets/include/linux
   ${COCOS2D_ROOT}/external/spidermonkey/include/linux
