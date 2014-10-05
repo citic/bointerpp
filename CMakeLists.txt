@@ -39,7 +39,7 @@ endif()
 set(COMMON_SRC
   Classes/AppDelegate.cpp
   Classes/BaseScene.cpp
-  Classes/HelloWorldScene.cpp
+  Classes/GameMenu/GameMenuScene.cpp
 )
 
 if( UNIX ) #assume linux
