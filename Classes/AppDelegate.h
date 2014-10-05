@@ -4,40 +4,30 @@
 #include <cocos2d.h>
 
 /**
-@brief    The cocos2d Application.
+@brief Represents the global video game object, the cocos2d Application.
 
 The reason for implement as private inheritance is to hide some interface call by Director.
 */
 class  AppDelegate : private cocos2d::Application
 {
-public:
+  public:
+	/// Constructor
 	AppDelegate();
+	/// Destructor
 	virtual ~AppDelegate();
-
+	/// Added in Cocos2d-x v3.3
 	virtual void initGLContextAttrs();
-
-	/**
-	@brief    Implement Director and Scene init code here.
-	@return true    Initialize success, app continue.
-	@return false   Initialize failed, app terminate.
-	*/
+	/// Called when the game is run from operating system, for doing initialization
+	/// @return true on success, app continue, false on fail, app terminate.
 	virtual bool applicationDidFinishLaunching();
-
-	/**
-	@brief  The function be called when the application enter background
-	@param  the pointer of the application
-	*/
+	/// The game is running but it was minimized
 	virtual void applicationDidEnterBackground();
-
-	/**
-	@brief  The function be called when the application enter foreground
-	@param  the pointer of the application
-	*/
+	/// The game was minimized and now it is being restored
 	virtual void applicationWillEnterForeground();
 
   protected:
-	   /// Create the window, set its size and other initialization
-	   void createWindow();
+	/// Create the window, set its size and other initialization
+	void createWindow();
 };
 
 #endif // _APP_DELEGATE_H_
