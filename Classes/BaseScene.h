@@ -15,6 +15,12 @@ static cocos2d::Scene* createScene() \
  */
 class BaseScene : public cocos2d::Layer
 {
+  protected:
+	/// The first visible (x,y) pixel of the window/screen
+	cocos2d::Vec2 visibleOrigin;
+	/// The current size (width, height) of the window/screen
+	cocos2d::Size visibleSize;
+
   public:
 	/// Initializes the scene. This method is called before the scene is shown
 	virtual bool init();
@@ -23,17 +29,17 @@ class BaseScene : public cocos2d::Layer
 
   public: // Coordinates for the 4 corners
 	/// Gets the first left visible x pixel
-	float leftX() const;
+	inline float leftX() const { return visibleOrigin.x; }
 	/// Gets the last right visible x pixel
-	float rightX() const;
+	inline float rightX() const { return visibleOrigin.x + visibleSize.width; }
 	/// Gets the first top visible y pixel
-	float topY() const;
+	inline float topY() const { return visibleOrigin.y + visibleSize.height; }
 	/// Gets the last bottom visible y pixel
-	float bottomY() const;
+	inline float bottomY() const { return visibleOrigin.y; }
 	/// Gets the x pixel in the middle of the window
-	float centerX() const;
+	inline float centerX() const { return visibleOrigin.x + visibleSize.width * 0.5f; }
 	/// Gets the y pixel in the middle of the window
-	float centerY() const;
+	inline float centerY() const { return visibleOrigin.y + visibleSize.height * 0.5f; }
 };
 
 #endif // BASESCENE_H
