@@ -74,7 +74,12 @@ void AppDelegate::createWindow()
 	// If running on mobile device, window exists, on PC it is created
 	if( ! window )
 	{
-		window = GLViewImpl::create("bointer++");
+		auto config = UserDefault::getInstance();
+		if ( config->getBoolForKey("System/FullScreen", false) )
+			window = GLViewImpl::createWithFullScreen("bointer++");
+		else
+			window = GLViewImpl::create("bointer++");
+		assert(window);
 		director->setOpenGLView(window);
 	}
 

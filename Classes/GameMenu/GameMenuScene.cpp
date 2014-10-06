@@ -17,7 +17,7 @@ bool HelloWorld::init()
 	auto closeItem = MenuItemImage::create("CloseNormal.png", "CloseSelected.png", CC_CALLBACK_1(HelloWorld::menuCloseCallback, this));
 
 	closeItem->setPosition(Vec2(rightX() - closeItem->getContentSize().width * 0.5f,
-								bottomY() + closeItem->getContentSize().height * 0.5f));
+								topY() - closeItem->getContentSize().height * 0.5f));
 
 	// create menu, it's an autorelease object
 	auto menu = Menu::create(closeItem, NULL);

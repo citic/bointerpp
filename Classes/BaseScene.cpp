@@ -19,5 +19,9 @@ bool BaseScene::init()
 
 void BaseScene::menuCloseCallback(Ref* pSender)
 {
+	auto config = UserDefault::getInstance();
+	bool old = config->getBoolForKey("System/FullScreen", false);
+	config->setBoolForKey("System/FullScreen", ! old);
+	config->flush();
 	Director::getInstance()->end();
 }
