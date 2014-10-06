@@ -56,9 +56,16 @@ set(GAME_SRC
 )
 endif()
 
+set(COMMON_INCLUDE
+	${CMAKE_SOURCE_DIR}/Classes
+	${CMAKE_SOURCE_DIR}/Classes/GameMenu
+)
+
+
 set(COCOS2D_ROOT ${CMAKE_SOURCE_DIR}/cocos2d)
 if (WIN32)
 include_directories(
+  ${COMMON_INCLUDE}
   ${COCOS2D_ROOT}
   ${COCOS2D_ROOT}/cocos
   ${COCOS2D_ROOT}/cocos/audio/include
@@ -114,6 +121,7 @@ elseif(UNIX) #assumed linux
 include_directories(
   /usr/local/include/GLFW
   /usr/include/GLFW
+  ${COMMON_INCLUDE}
   ${COCOS2D_ROOT}
   ${COCOS2D_ROOT}/cocos
   ${COCOS2D_ROOT}/cocos/audio/include
@@ -162,20 +170,20 @@ target_link_libraries(${APP_NAME} cocos2d)
 set(APP_BIN_DIR "${CMAKE_BINARY_DIR}/bin")
 
 set_target_properties(${APP_NAME} PROPERTIES
-     RUNTIME_OUTPUT_DIRECTORY  "${APP_BIN_DIR}")
+	 RUNTIME_OUTPUT_DIRECTORY  "${APP_BIN_DIR}")
 
 if ( WIN32 )
   #also copying dlls to binary directory for the executable to run
   pre_build(${APP_NAME}
-    COMMAND ${CMAKE_COMMAND} -E remove_directory ${APP_BIN_DIR}/Resources
-    COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_CURRENT_SOURCE_DIR}/Resources ${APP_BIN_DIR}/Resources
-    COMMAND ${CMAKE_COMMAND} -E copy ${COCOS2D_ROOT}/external/win32-specific/gles/prebuilt/glew32.dll ${APP_BIN_DIR}/${CMAKE_BUILD_TYPE}
+	COMMAND ${CMAKE_COMMAND} -E remove_directory ${APP_BIN_DIR}/Resources
+	COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_CURRENT_SOURCE_DIR}/Resources ${APP_BIN_DIR}/Resources
+	COMMAND ${CMAKE_COMMAND} -E copy ${COCOS2D_ROOT}/external/win32-specific/gles/prebuilt/glew32.dll ${APP_BIN_DIR}/${CMAKE_BUILD_TYPE}
 	COMMAND ${CMAKE_COMMAND} -E copy ${COCOS2D_ROOT}/external/win32-specific/zlib/prebuilt/zlib1.dll ${APP_BIN_DIR}/${CMAKE_BUILD_TYPE}
 	)
 else()
   pre_build(${APP_NAME}
-    COMMAND ${CMAKE_COMMAND} -E remove_directory ${APP_BIN_DIR}/Resources
-    COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_CURRENT_SOURCE_DIR}/Resources ${APP_BIN_DIR}/Resources
-    )
+	COMMAND ${CMAKE_COMMAND} -E remove_directory ${APP_BIN_DIR}/Resources
+	COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_CURRENT_SOURCE_DIR}/Resources ${APP_BIN_DIR}/Resources
+	)
 
 endif()
