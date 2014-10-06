@@ -4,7 +4,7 @@
 USING_NS_CC;
 
 // on "init" you need to initialize your instance
-bool HelloWorld::init()
+bool GameMenuScene::init()
 {
 	// Init parent class
 	if ( ! BaseScene::init() ) return false;
@@ -14,7 +14,7 @@ bool HelloWorld::init()
 
 	// add a "close" icon to exit the progress. it's an autorelease object
 #if PLATFORM_PC
-	auto closeItem = MenuItemImage::create("CloseNormal.png", "CloseSelected.png", CC_CALLBACK_1(HelloWorld::menuCloseCallback, this));
+	auto closeItem = MenuItemImage::create("CloseNormal.png", "CloseSelected.png", CC_CALLBACK_1(GameMenuScene::menuCloseCallback, this));
 
 	closeItem->setPosition(Vec2(rightX() - closeItem->getContentSize().width * 0.5f,
 								topY() - closeItem->getContentSize().height * 0.5f));

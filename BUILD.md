@@ -49,7 +49,7 @@ If you get the linker error `cannot find -lGL`, a symlink may be missing in your
 
 If running on a Parallels virtual machine and you get the below error, disable 3D acceleration in Video preferences of the virtual machine. Note your machine will become slower.
 
-	X Error of failed request: BadMatch (invalid parameter attributes) parallels
+	X Error of failed request: BadMatch (invalid parameter attributes)
 
 
 Android

@@ -3,15 +3,15 @@
 
 #include "BaseScene.h"
 
-class HelloWorld : public BaseScene
+class GameMenuScene : public BaseScene
 {
 public:
 	/// Create a scene containing this layer
-	CREATE_SCENE(HelloWorld)
+	CREATE_SCENE(GameMenuScene)
 	/// Initializes the scene. This method is called before the scene is shown
 	virtual bool init();
 	/// implement the "static create()" method manually
-	CREATE_FUNC(HelloWorld);
+	CREATE_FUNC(GameMenuScene)
 };
 
 #endif // __HELLOWORLD_SCENE_H__
