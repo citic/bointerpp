@@ -91,7 +91,11 @@ void AppDelegate::createWindow()
 		director->setOpenGLView(window);
 	}
 
+  #if PLATFORM_MOBILE
 	window->setDesignResolutionSize(1024, 768, ResolutionPolicy::NO_BORDER);
+  #else
+	window->setDesignResolutionSize(1024, 768, ResolutionPolicy::EXACT_FIT);
+  #endif
 
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS )
 	// If it is running on iPad HD, indicate our graphics are designed for HD
