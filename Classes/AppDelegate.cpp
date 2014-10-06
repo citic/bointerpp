@@ -18,9 +18,11 @@ void AppDelegate::initGLContextAttrs()
 {
 	//set OpenGL context attributions,now can only set six attributions:
 	//red,green,blue,alpha,depth,stencil
+#ifndef LINUX
 	GLContextAttrs glContextAttrs = {8, 8, 8, 8, 24, 8};
 
 	GLView::setGLContextAttrs(glContextAttrs);
+#endif
 }
 
 bool AppDelegate::applicationDidFinishLaunching()
@@ -66,6 +68,12 @@ void AppDelegate::applicationWillEnterForeground()
 	// SimpleAudioEngine::getInstance()->resumeBackgroundMusic();
 }
 
+#ifdef LINUX
+#define GLVIEWCLASS GLView
+#else
+#define GLVIEWCLASS GLViewImpl
+#endif
+
 void AppDelegate::createWindow()
 {
 	auto director = Director::getInstance();
@@ -76,9 +84,9 @@ void AppDelegate::createWindow()
 	{
 		auto config = UserDefault::getInstance();
 		if ( config->getBoolForKey("System/FullScreen", false) )
-			window = GLViewImpl::createWithFullScreen("bointer++");
+			window = GLVIEWCLASS::createWithFullScreen("bointer++");
 		else
-			window = GLViewImpl::create("bointer++");
+			window = GLVIEWCLASS::create("bointer++");
 		assert(window);
 		director->setOpenGLView(window);
 	}

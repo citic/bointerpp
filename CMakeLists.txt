@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.6)
 
-set(APP_NAME MyGame)
+set(APP_NAME bointerpp)
 project (${APP_NAME})
 
 include(cocos2d/build/BuildHelpers.CMakeLists.txt)
@@ -54,25 +54,35 @@ else()
 set(ARCH_DIR "32-bit")
 endif()
 
+set(COMMON_SRC
+  Classes/AppDelegate.cpp
+  Classes/BaseScene.cpp
+  Classes/GameMenu/GameMenuScene.cpp
+)
+
 if( UNIX ) #assume linux
 set(GAME_SRC
   proj.linux/main.cpp
-  Classes/AppDelegate.cpp
-  Classes/HelloWorldScene.cpp
+  ${COMMON_SRC}
 )
 elseif ( WIN32 )
 set(GAME_SRC
   proj.win32/main.cpp
   proj.win32/main.h
   proj.win32/resource.h
-  Classes/AppDelegate.cpp
-  Classes/HelloWorldScene.cpp
+  ${COMMON_SRC}
 )
 endif()
+
+set(COMMON_INCLUDE
+	${CMAKE_SOURCE_DIR}/Classes
+	${CMAKE_SOURCE_DIR}/Classes/GameMenu
+)
 
 set(COCOS2D_ROOT ${CMAKE_SOURCE_DIR}/cocos2d)
 if (WIN32)
 include_directories(
+  ${COMMON_INCLUDE}
   ${COCOS2D_ROOT}
   ${COCOS2D_ROOT}/cocos
   ${COCOS2D_ROOT}/cocos/audio/include
@@ -128,6 +138,7 @@ elseif(UNIX) #assumed linux
 include_directories(
   /usr/local/include/GLFW
   /usr/include/GLFW
+  ${COMMON_INCLUDE}
   ${COCOS2D_ROOT}
   ${COCOS2D_ROOT}/cocos
   ${COCOS2D_ROOT}/cocos/audio/include
