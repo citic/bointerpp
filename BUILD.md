@@ -24,6 +24,7 @@ The following script pseudo-code briefs these steps for Linux:
 	cd <cocos2d-x-x.y.z>/build
 	sudo aptitude update
 	sudo ./install-deps-linux.sh
+	cd ..
 	#echo export COCOS2D_ROOT=`pwd` >> $HOME/.profile
 	#echo export COCOS2DX_ROOT=`pwd` >> $HOME/.profile
 	# remember log-out and log-in
@@ -31,15 +32,20 @@ The following script pseudo-code briefs these steps for Linux:
 
 Linux
 -----
-In order to build Puppeteer++, go to the folder where the game is. Create a `build` directory. Create makefiles, compile them and run the game:
+In order to build bointer++, go to the folder where the game is. Create a `build` directory. Create makefiles, compile them and run the game:
 
-	cd <puppeteerpp>
+	cd <bointerpp>
 	mkdir -p build
 	cd build
 	cmake ..
 	make -j4
-	
+
 	bin/MyGame
+
+If you get the linker error `cannot find -lGL`, a symlink may be missing in your operating system (Ubuntu 64bits). Create the symlink:
+
+	cd /usr/lib/x86_64-linux-gnu/mesa
+	sudo ln -s libGL.so.1 libGL.so.1.2.0
 
 
 Android
