@@ -74,3 +74,8 @@ local.properties
 *.suo
 Debug.win32/
 Release.win32/
+
+# Project specific
+tmp
+# temporary, due to file size
+Resources/GameMenu/GameMenu.svg
