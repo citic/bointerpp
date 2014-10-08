@@ -14,6 +14,12 @@ class GameMenuScene : public BaseScene
 	virtual bool init();
 	/// implement the "static create()" method manually
 	CREATE_FUNC(GameMenuScene)
+
+  protected:
+	/// Create the game menu and its items
+	void createMenu();
+	/// Create a label menu item
+	void createMenuItem(size_t pos, const std::string& text, const cocos2d::ccMenuCallback& callback);
 };
 
 #endif // __HELLOWORLD_SCENE_H__

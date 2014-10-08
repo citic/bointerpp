@@ -5,5 +5,7 @@
 
 #define PLATFORM_MOBILE ((CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID) || (CC_TARGET_PLATFORM == CC_PLATFORM_IOS) || (CC_TARGET_PLATFORM == CC_PLATFORM_WP8))
 
+// Translation to user language
+#define _(STR) STR
 
 #endif

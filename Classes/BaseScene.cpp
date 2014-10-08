@@ -25,7 +25,7 @@ void BaseScene::initResourceDirectories()
 	fileUtils->setSearchPaths(searchPaths);
 
   #if COCOS2D_DEBUG
-	log("Scene %s: resources from %s", (sceneName + '/' + graphicsFolder).c_str());
+	log("Scene %s: resources from %s", sceneName.c_str(), (sceneName + '/' + graphicsFolder).c_str());
   #endif
 }
 
