@@ -20,6 +20,8 @@ class BaseScene : public cocos2d::Layer
 	static const int zorderBackground = 0;
 	static const int zorderMiddleground = 1;
 	static const int zorderForeground = 2;
+	/// Color for fonts
+	static const cocos2d::Color3B fontColor;
 
   protected:
 	/// Each scene has a unique identifier

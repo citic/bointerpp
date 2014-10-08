@@ -3,6 +3,7 @@
 
 USING_NS_CC;
 
+const Color3B BaseScene::fontColor = Color3B(104, 207, 209);
 
 BaseScene::BaseScene(const std::string& sceneName)
 	: sceneName(sceneName)
@@ -15,7 +16,7 @@ void BaseScene::initResourceDirectories()
 	std::vector<std::string> searchPaths;
 	const std::string& graphicsFolder = searchGraphicsFolder();
 
-	searchPaths.push_back("Font");
+	searchPaths.push_back("Fonts");
 	searchPaths.push_back("Music");
 	searchPaths.push_back(graphicsFolder);
 	searchPaths.push_back(sceneName);
