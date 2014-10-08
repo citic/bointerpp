@@ -49,10 +49,10 @@ bool GameMenuScene::init()
 
 void GameMenuScene::createMenu()
 {
-	createMenuItem(0, _("Training"), CC_CALLBACK_1(GameMenuScene::menuCloseCallback, this));
-	createMenuItem(1, _("Missions"), CC_CALLBACK_1(GameMenuScene::menuCloseCallback, this));
-	createMenuItem(2, _("Collaborative"), CC_CALLBACK_1(GameMenuScene::menuCloseCallback, this));
-	createMenuItem(3, _("Building"), CC_CALLBACK_1(GameMenuScene::menuCloseCallback, this));
+	createMenuItem(0, _("Training"), CC_CALLBACK_1(GameMenuScene::menuTrainingPressed, this));
+	createMenuItem(1, _("Missions"), CC_CALLBACK_1(GameMenuScene::menuMissionsPressed, this));
+	createMenuItem(2, _("Collaboration"), CC_CALLBACK_1(GameMenuScene::menuCollaborationPressed, this));
+	createMenuItem(3, _("Building"), CC_CALLBACK_1(GameMenuScene::menuBuildingPressed, this));
 }
 
 void GameMenuScene::createMenuItem(size_t pos, const std::string& text, const ccMenuCallback& callback)
@@ -78,4 +78,24 @@ void GameMenuScene::createMenuItem(size_t pos, const std::string& text, const cc
 	auto menu = Menu::create(menuItem, NULL);
 	menu->setPosition(Vec2::ZERO);
 	this->addChild(menu, 1);
+}
+
+void GameMenuScene::menuTrainingPressed(Ref* pSender)
+{
+	log("No implemented in this version");
+}
+
+void GameMenuScene::menuMissionsPressed(Ref* pSender)
+{
+	log("No implemented in this version");
+}
+
+void GameMenuScene::menuCollaborationPressed(Ref* pSender)
+{
+	log("No implemented in this version");
+}
+
+void GameMenuScene::menuBuildingPressed(Ref* pSender)
+{
+	log("No implemented in this version");
 }
