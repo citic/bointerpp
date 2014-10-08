@@ -31,7 +31,7 @@ class BaseScene : public cocos2d::Layer
 
   public:
 	/// Constructor
-	explicit GameScene(const std::string& sceneName);
+	explicit BaseScene(const std::string& sceneName);
 	/// Initializes the scene. This method is called before the scene is shown
 	virtual bool init();
 	/// Called when the close button is pressed
