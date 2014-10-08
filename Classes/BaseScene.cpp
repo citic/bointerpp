@@ -70,7 +70,6 @@ void BaseScene::menuCloseCallback(Ref* pSender)
 
 void BaseScene::playMusic()
 {
-
 }
 
 void BaseScene::createBackground(const char* backgroundFilename)
@@ -82,5 +81,28 @@ void BaseScene::createBackground(const char* backgroundFilename)
 
 void BaseScene::createStandardMenu()
 {
+	createBackButton();
+	createGameLogo();
+	createInfoButton();
+	createConfigButton();
+}
 
+void BaseScene::createBackButton()
+{
+}
+
+void BaseScene::createGameLogo()
+{
+}
+
+void BaseScene::createInfoButton()
+{
+}
+
+void BaseScene::createConfigButton()
+{
+}
+
+void BaseScene::createPlayerSection()
+{
 }

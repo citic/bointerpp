@@ -37,7 +37,7 @@ class BaseScene : public cocos2d::Layer
 	/// Called when the close button is pressed
 	void menuCloseCallback(cocos2d::Ref* pSender);
 
-  public: // Coordinates for the 4 corners
+  public: // Coordinates for common screen places
 	/// Gets the first left visible x pixel
 	inline float leftX() const { return visibleOrigin.x; }
 	/// Gets the last right visible x pixel
@@ -63,6 +63,16 @@ class BaseScene : public cocos2d::Layer
 	virtual void createBackground(const char* backgroundFilename = "Background.jpg");
 	/// Creates a standard menu with common buttons: configure, back/exit, player...
 	virtual void createStandardMenu();
+	/// Creates the button to return to the level selection scene or game menu
+	virtual void createBackButton();
+	/// Shows the game logo in the menu of the game
+	virtual void createGameLogo();
+	/// Creates the info button for showing credits in game menu or the unit description in game
+	virtual void createInfoButton();
+	/// Creates the config button and places it in the screen
+	virtual void createConfigButton();
+	/// Creates a sprite for showing basic information of the current player
+	virtual void createPlayerSection();
 };
 
 #endif // BASESCENE_H

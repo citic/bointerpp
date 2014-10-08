@@ -20,6 +20,10 @@ class GameMenuScene : public BaseScene
 	void createMenu();
 	/// Create a label menu item
 	void createMenuItem(size_t pos, const std::string& text, const cocos2d::ccMenuCallback& callback);
+	/// Creates the button to return to the level selection scene or game menu
+	virtual void createBackButton();
+	/// Creates a sprite for showing basic information of the current player
+	virtual void createPlayerSection();
 
   public: // Call back functions
 	/// Called when the Training button/menu item is pressed

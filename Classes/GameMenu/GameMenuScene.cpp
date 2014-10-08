@@ -8,42 +8,17 @@ GameMenuScene::GameMenuScene()
 {
 }
 
-// on "init" you need to initialize your instance
 bool GameMenuScene::init()
 {
-	// Init parent class
+	// Init parent class first
 	if ( ! BaseScene::init() ) return false;
 
+	// Create scenery
 	createMenu();
+	createBackButton();
+	createPlayerSection();
 
-	// 2. add a menu item with "X" image, which is clicked to quit the program
-	//    you may modify it.
-
-	// add a "close" icon to exit the progress. it's an autorelease object
-#if PLATFORM_PC
-	auto closeItem = MenuItemImage::create("CloseNormal.png", "CloseSelected.png", CC_CALLBACK_1(GameMenuScene::menuCloseCallback, this));
-
-	closeItem->setPosition(Vec2(leftX() + closeItem->getContentSize().width * 0.5f,
-								topY() - closeItem->getContentSize().height * 0.5f));
-
-	// create menu, it's an autorelease object
-	auto menu = Menu::create(closeItem, NULL);
-	menu->setPosition(Vec2::ZERO);
-	this->addChild(menu, 1);
-#endif // PLATFORM_PC
-
-	/////////////////////////////
-	// 3. add your codes below...
-
-	// add a label shows "Hello World"
-	auto label = LabelTTF::create("Hello World", "Arial", 24);
-
-	// position the label on the center of the screen
-	label->setPosition(Vec2(centerX(), topY() - label->getContentSize().height));
-
-	// add the label as a child to this layer
-	this->addChild(label, 1);
-
+	// Done
 	return true;
 }
 
@@ -78,6 +53,35 @@ void GameMenuScene::createMenuItem(size_t pos, const std::string& text, const cc
 	auto menu = Menu::create(menuItem, NULL);
 	menu->setPosition(Vec2::ZERO);
 	this->addChild(menu, 1);
+}
+
+void GameMenuScene::createBackButton()
+{
+#if PLATFORM_PC
+	auto closeItem = MenuItemImage::create("CloseNormal.png", "CloseSelected.png", CC_CALLBACK_1(BaseScene::menuCloseCallback, this));
+	float x = leftX() + closeItem->getContentSize().width * 0.5f;
+	float y = topY() - closeItem->getContentSize().height * 0.5f;
+	closeItem->setPosition(Vec2(x, y));
+
+	// create menu, it's an autorelease object
+	auto menu = Menu::create(closeItem, NULL);
+	menu->setPosition(Vec2::ZERO);
+	this->addChild(menu, 1);
+#endif // PLATFORM_PC
+}
+
+void GameMenuScene::createPlayerSection()
+{
+	// add a label shows "Hello World"
+	auto label = LabelTTF::create("Hello World", "Arial", 24);
+
+	// Position the label on the top right corner
+	float x = rightX() - label->getContentSize().width * 0.5f - 20.0f;
+	float y = topY() - label->getContentSize().height;
+	label->setPosition(Vec2(x, y));
+
+	// add the label as a child to this layer
+	this->addChild(label, 1);
 }
 
 void GameMenuScene::menuTrainingPressed(Ref* pSender)
