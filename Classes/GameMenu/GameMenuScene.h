@@ -5,7 +5,9 @@
 
 class GameMenuScene : public BaseScene
 {
-public:
+  public:
+	/// Constructor
+	GameMenuScene();
 	/// Create a scene containing this layer
 	CREATE_SCENE(GameMenuScene)
 	/// Initializes the scene. This method is called before the scene is shown

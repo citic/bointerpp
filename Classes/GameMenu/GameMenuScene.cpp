@@ -3,6 +3,11 @@
 
 USING_NS_CC;
 
+GameMenuScene::GameMenuScene()
+	: BaseScene("GameMenu")
+{
+}
+
 // on "init" you need to initialize your instance
 bool GameMenuScene::init()
 {
@@ -36,15 +41,6 @@ bool GameMenuScene::init()
 
 	// add the label as a child to this layer
 	this->addChild(label, 1);
-
-	// add "HelloWorld" splash screen"
-	auto sprite = Sprite::create("GameMenu/Background.jpg");
-
-	// position the sprite on the center of the screen
-	sprite->setPosition(Vec2(centerX(), centerY()));
-
-	// add the sprite as a child to this layer
-	this->addChild(sprite, 0);
 
 	return true;
 }

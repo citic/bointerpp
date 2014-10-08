@@ -15,13 +15,23 @@ static cocos2d::Scene* createScene() \
  */
 class BaseScene : public cocos2d::Layer
 {
+  public: // Data types and constants
+	/// Constants used to distinguish the z-order of sprites in the same layer
+	static const int zorderBackground = 0;
+	static const int zorderMiddleground = 1;
+	static const int zorderForeground = 2;
+
   protected:
+	/// Each scene has a unique identifier
+	std::string sceneName;
 	/// The first visible (x,y) pixel of the window/screen
 	cocos2d::Vec2 visibleOrigin;
 	/// The current size (width, height) of the window/screen
 	cocos2d::Size visibleSize;
 
   public:
+	/// Constructor
+	explicit GameScene(const std::string& sceneName);
 	/// Initializes the scene. This method is called before the scene is shown
 	virtual bool init();
 	/// Called when the close button is pressed
@@ -40,6 +50,19 @@ class BaseScene : public cocos2d::Layer
 	inline float centerX() const { return visibleOrigin.x + visibleSize.width * 0.5f; }
 	/// Gets the y pixel in the middle of the window
 	inline float centerY() const { return visibleOrigin.y + visibleSize.height * 0.5f; }
+
+  protected:
+	/// Set the search paths for locating resources
+	void initResourceDirectories();
+	/// Determines the best graphics directory for the given resolution of this device/PC
+	/// It returns a string such as "1024x768" or "2048x1536"
+	static std::string searchGraphicsFolder();
+	/// Plays background music for the game
+	virtual void playMusic();
+	/// Places the background image of the menu
+	virtual void createBackground(const char* backgroundFilename = "Background.jpg");
+	/// Creates a standard menu with common buttons: configure, back/exit, player...
+	virtual void createStandardMenu();
 };
 
 #endif // BASESCENE_H
