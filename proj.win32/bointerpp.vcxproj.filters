@@ -15,9 +15,16 @@
     <ClCompile Include="main.cpp">
       <Filter>win32</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\AppDelegate.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
+    <ClCompile Include="..\Classes\AppDelegate.cpp"><Filter>src</Filter></ClCompile>
+    <ClCompile Include="..\Classes\GameMenuScene.cpp"><Filter>src</Filter></ClCompile>
+    <ClCompile Include="..\Classes\Common\GameScene.cpp"><Filter>src</Filter></ClCompile>
+    <ClCompile Include="..\Classes\Common\BaseScene.cpp"><Filter>src</Filter></ClCompile>
+    <ClCompile Include="..\Classes\Dialogs\InfoDialog.cpp"><Filter>src</Filter></ClCompile>
+    <ClCompile Include="..\Classes\Dialogs\ConfigDialog.cpp"><Filter>src</Filter></ClCompile>
+    <ClCompile Include="..\Classes\Dialogs\BaseDialog.cpp"><Filter>src</Filter></ClCompile>
+    <ClCompile Include="..\Classes\Dialogs\PlayerDialog.cpp"><Filter>src</Filter></ClCompile>
+    <ClCompile Include="..\Classes\Playing\UnitPlayingScene.cpp"><Filter>src</Filter></ClCompile>
+    <ClCompile Include="..\Classes\Selection\UnitSelectionScene.cpp"><Filter>src</Filter></ClCompile>
     <ClCompile Include="..\Classes\Common\BaseScene.cpp">
       <Filter>src</Filter>
     </ClCompile>
@@ -29,17 +36,17 @@
     <ClInclude Include="main.h">
       <Filter>win32</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\AppDelegate.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\Common\Common.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\Common\BaseScene.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\GameMenuScene.h">
-      <Filter>src</Filter>
+    <ClInclude Include="..\Classes\AppDelegate.h"><Filter>src</Filter></ClInclude>
+    <ClInclude Include="..\Classes\GameMenuScene.h"><Filter>src</Filter></ClInclude>
+    <ClInclude Include="..\Classes\Common\BaseScene.h"><Filter>src</Filter></ClInclude>
+    <ClInclude Include="..\Classes\Common\Common.h"><Filter>src</Filter></ClInclude>
+    <ClInclude Include="..\Classes\Common\GameScene.h"><Filter>src</Filter></ClInclude>
+    <ClInclude Include="..\Classes\Dialogs\InfoDialog.h"><Filter>src</Filter></ClInclude>
+    <ClInclude Include="..\Classes\Dialogs\ConfigDialog.h"><Filter>src</Filter></ClInclude>
+    <ClInclude Include="..\Classes\Dialogs\PlayerDialog.h"><Filter>src</Filter></ClInclude>
+    <ClInclude Include="..\Classes\Dialogs\BaseDialog.h"><Filter>src</Filter></ClInclude>
+    <ClInclude Include="..\Classes\Playing\UnitPlayingScene.h"><Filter>src</Filter></ClInclude>
+    <ClInclude Include="..\Classes\Selection\UnitSelectionScene.h"><Filter>src</Filter></ClInclude>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

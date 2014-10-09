@@ -55,9 +55,16 @@ set(ARCH_DIR "32-bit")
 endif()
 
 set(COMMON_SRC
-  Classes/AppDelegate.cpp
-  Classes/Common/BaseScene.cpp
-  Classes/GameMenuScene.cpp
+	Classes/AppDelegate.cpp
+	Classes/GameMenuScene.cpp
+	Classes/Common/GameScene.cpp
+	Classes/Common/BaseScene.cpp
+	Classes/Dialogs/InfoDialog.cpp
+	Classes/Dialogs/ConfigDialog.cpp
+	Classes/Dialogs/BaseDialog.cpp
+	Classes/Dialogs/PlayerDialog.cpp
+	Classes/Playing/UnitPlayingScene.cpp
+	Classes/Selection/UnitSelectionScene.cpp
 )
 
 if( UNIX ) #assume linux
@@ -76,7 +83,12 @@ endif()
 
 set(COMMON_INCLUDE
 	${CMAKE_SOURCE_DIR}/Classes
+	${CMAKE_SOURCE_DIR}/Classes/Collaboration
 	${CMAKE_SOURCE_DIR}/Classes/Common
+	${CMAKE_SOURCE_DIR}/Classes/Building
+	${CMAKE_SOURCE_DIR}/Classes/Dialogs
+	${CMAKE_SOURCE_DIR}/Classes/Playing
+	${CMAKE_SOURCE_DIR}/Classes/Selection
 )
 
 set(COCOS2D_ROOT ${CMAKE_SOURCE_DIR}/cocos2d)
