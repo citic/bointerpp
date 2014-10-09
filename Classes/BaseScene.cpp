@@ -16,12 +16,12 @@ void BaseScene::initResourceDirectories()
 	std::vector<std::string> searchPaths;
 	const std::string& graphicsFolder = searchGraphicsFolder();
 
-	searchPaths.push_back("Fonts");
-	searchPaths.push_back("Music");
-	searchPaths.push_back(graphicsFolder);
-	searchPaths.push_back(sceneName);
 	searchPaths.push_back(sceneName + '/' + graphicsFolder);
 	searchPaths.push_back(sceneName + "/Effects");
+	searchPaths.push_back(sceneName);
+	searchPaths.push_back(graphicsFolder);
+	searchPaths.push_back("Fonts");
+	searchPaths.push_back("Music");
 
 	fileUtils->setSearchPaths(searchPaths);
 
@@ -102,8 +102,35 @@ void BaseScene::createInfoButton()
 
 void BaseScene::createConfigButton()
 {
+/*
+	auto button = createButton("Config", CC_CALLBACK_1(BaseScene::buttonConfigPressed, this));
+	float x = rightX() * 0.8f;
+	float y = topY() - button->getContentSize().height * 0.5f;
+	button->setPosition(Vec2(x, y));
+ */
 }
 
 void BaseScene::createPlayerSection()
 {
 }
+
+MenuItem* BaseScene::createButton(const std::string& name, const cocos2d::ccMenuCallback& callback, float x, float y)
+{
+	auto button = MenuItemImage::create(name + "Up.png", name + "Down.png", callback);
+	button->setPosition(Vec2(x, y));
+	addMenuItem(button);
+	return button;
+}
+
+void BaseScene::addMenuItem(MenuItem* item)
+{
+	auto menu = Menu::create(item, NULL);
+	menu->setPosition(Vec2::ZERO);
+	this->addChild(menu, 1);
+}
+
+void BaseScene::buttonConfigPressed(cocos2d::Ref* pSender)
+{
+	log("Config dialog not implemented in this version");
+}
+

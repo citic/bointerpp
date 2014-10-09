@@ -51,23 +51,17 @@ void GameMenuScene::createMenuItem(size_t pos, const std::string& text, const cc
 	label->setPosition(Vec2(x, y));
 
 	// Create the menu and add the menu item as a child
-	auto menu = Menu::create(menuItem, NULL);
-	menu->setPosition(Vec2::ZERO);
-	this->addChild(menu, 1);
+	addMenuItem(menuItem);
 }
 
 void GameMenuScene::createBackButton()
 {
 #if PLATFORM_PC
-	auto closeItem = MenuItemImage::create("CloseNormal.png", "CloseSelected.png", CC_CALLBACK_1(BaseScene::menuCloseCallback, this));
+	auto closeItem = MenuItemImage::create("CloseNormal.png", "CloseSelected.png", CC_CALLBACK_1(GameMenuScene::menuCloseCallback, this));
 	float x = leftX() + closeItem->getContentSize().width * 0.5f;
 	float y = topY() - closeItem->getContentSize().height * 0.5f;
 	closeItem->setPosition(Vec2(x, y));
-
-	// create menu, it's an autorelease object
-	auto menu = Menu::create(closeItem, NULL);
-	menu->setPosition(Vec2::ZERO);
-	this->addChild(menu, 1);
+	addMenuItem(closeItem);
 #endif // PLATFORM_PC
 }
 
@@ -87,20 +81,20 @@ void GameMenuScene::createPlayerSection()
 
 void GameMenuScene::menuTrainingPressed(Ref* pSender)
 {
-	log("No implemented in this version");
+	log("Training not implemented in this version");
 }
 
 void GameMenuScene::menuMissionsPressed(Ref* pSender)
 {
-	log("No implemented in this version");
+	log("Missions not implemented in this version");
 }
 
 void GameMenuScene::menuCollaborationPressed(Ref* pSender)
 {
-	log("No implemented in this version");
+	log("Collaboration not implemented in this version");
 }
 
 void GameMenuScene::menuBuildingPressed(Ref* pSender)
 {
-	log("No implemented in this version");
+	log("Building units not implemented in this version");
 }

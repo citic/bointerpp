@@ -75,6 +75,16 @@ class BaseScene : public cocos2d::Layer
 	virtual void createConfigButton();
 	/// Creates a sprite for showing basic information of the current player
 	virtual void createPlayerSection();
+	/// Creates a button
+	/// @param Send just the name, for example, "Close". It automatically generates "CloseUp.png" and
+	/// "CloseDown.png" states
+	cocos2d::MenuItem* createButton(const std::string& name, const cocos2d::ccMenuCallback& callback, float x = 0, float y = 0);
+	/// Creates a menu for the given menu item and add both to the scene
+	void addMenuItem(cocos2d::MenuItem* item);
+
+  public:
+	/// Called when the Config button is pressed
+	void buttonConfigPressed(cocos2d::Ref* pSender);
 };
 
 #endif // BASESCENE_H
