@@ -15,13 +15,13 @@
     <ClCompile Include="main.cpp">
       <Filter>win32</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\AppDelegate.cpp">
+    <ClCompile Include="..\Classes\AppDelegate.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\BaseScene.cpp">
+    <ClCompile Include="..\Classes\Common\BaseScene.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\HelloWorldScene.cpp">
+    <ClCompile Include="..\Classes\GameMenuScene.cpp">
       <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
@@ -32,13 +32,13 @@
     <ClInclude Include="..\Classes\AppDelegate.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\Common.h">
+    <ClInclude Include="..\Classes\Common\Common.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\BaseScene.h">
+    <ClInclude Include="..\Classes\Common\BaseScene.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\GameMenu\GameMenuScene.h">
+    <ClInclude Include="..\Classes\GameMenuScene.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>

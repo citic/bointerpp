@@ -56,8 +56,8 @@ endif()
 
 set(COMMON_SRC
   Classes/AppDelegate.cpp
-  Classes/BaseScene.cpp
-  Classes/GameMenu/GameMenuScene.cpp
+  Classes/Common/BaseScene.cpp
+  Classes/GameMenuScene.cpp
 )
 
 if( UNIX ) #assume linux
@@ -76,7 +76,7 @@ endif()
 
 set(COMMON_INCLUDE
 	${CMAKE_SOURCE_DIR}/Classes
-	${CMAKE_SOURCE_DIR}/Classes/GameMenu
+	${CMAKE_SOURCE_DIR}/Classes/Common
 )
 
 set(COCOS2D_ROOT ${CMAKE_SOURCE_DIR}/cocos2d)
