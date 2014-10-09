@@ -1,5 +1,7 @@
 #include "GameScene.h"
 
-GameScene::GameScene()
+/// Constructor
+GameScene::GameScene(const std::string& sceneName)
+	: BaseScene(sceneName)
 {
 }

@@ -5,8 +5,9 @@
 
 class GameScene : public BaseScene
 {
-public:
-	GameScene();
+  public:
+	/// Constructor
+	explicit GameScene(const std::string& sceneName);
 };
 
 #endif // GAMESCENE_H

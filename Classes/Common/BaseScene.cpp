@@ -1,4 +1,3 @@
-#include "Common.h"
 #include "BaseScene.h"
 
 USING_NS_CC;

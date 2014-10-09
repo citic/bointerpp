@@ -1,5 +1,6 @@
 #include "BaseDialog.h"
 
-BaseDialog::BaseDialog()
+BaseDialog::BaseDialog(const std::string& sceneName)
+	: BaseScene(sceneName)
 {
 }

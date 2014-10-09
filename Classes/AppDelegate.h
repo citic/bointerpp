@@ -1,5 +1,5 @@
-#ifndef  _APP_DELEGATE_H_
-#define  _APP_DELEGATE_H_
+#ifndef AppDelegate_h
+#define AppDelegate_h
 
 #include <cocos2d.h>
 
@@ -30,5 +30,5 @@ class AppDelegate : private cocos2d::Application
 	void createWindow();
 };
 
-#endif // _APP_DELEGATE_H_
+#endif // AppDelegate_h
 

@@ -56,8 +56,6 @@
 		D44C620E132DFF430009C878 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620D132DFF430009C878 /* AVFoundation.framework */; };
 		D44C6210132DFF4E0009C878 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620F132DFF4E0009C878 /* AudioToolbox.framework */; };
 		D6B0611B1803AB670077942B /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6B0611A1803AB670077942B /* CoreMotion.framework */; };
-		E10CFDB419E17C5000572C90 /* GameMenuScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E10CFDB219E17C5000572C90 /* GameMenuScene.cpp */; };
-		E10CFDB519E17C5000572C90 /* GameMenuScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E10CFDB219E17C5000572C90 /* GameMenuScene.cpp */; };
 		E17D150219E5E59F00817633 /* Statix.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E17D14FB19E5E59F00817633 /* Statix.ttf */; };
 		E17D150319E5E59F00817633 /* Statix.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E17D14FB19E5E59F00817633 /* Statix.ttf */; };
 		E17D150419E5E59F00817633 /* Tenby-Five.otf in Resources */ = {isa = PBXBuildFile; fileRef = E17D14FC19E5E59F00817633 /* Tenby-Five.otf */; };
@@ -70,8 +68,24 @@
 		E17D150B19E5E59F00817633 /* ButtonConfig.png in Resources */ = {isa = PBXBuildFile; fileRef = E17D150019E5E59F00817633 /* ButtonConfig.png */; };
 		E17D150C19E5E59F00817633 /* ButtonInformation.png in Resources */ = {isa = PBXBuildFile; fileRef = E17D150119E5E59F00817633 /* ButtonInformation.png */; };
 		E17D150D19E5E59F00817633 /* ButtonInformation.png in Resources */ = {isa = PBXBuildFile; fileRef = E17D150119E5E59F00817633 /* ButtonInformation.png */; };
-		E1BC775919E117D00053EBB0 /* BaseScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1BC775719E117D00053EBB0 /* BaseScene.cpp */; };
-		E1BC775A19E117D00053EBB0 /* BaseScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1BC775719E117D00053EBB0 /* BaseScene.cpp */; };
+		E1E7CEDB19E74CA900FA72ED /* BaseScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1E7CEC519E74CA900FA72ED /* BaseScene.cpp */; };
+		E1E7CEDC19E74CA900FA72ED /* BaseScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1E7CEC519E74CA900FA72ED /* BaseScene.cpp */; };
+		E1E7CEDD19E74CA900FA72ED /* GameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1E7CEC819E74CA900FA72ED /* GameScene.cpp */; };
+		E1E7CEDE19E74CA900FA72ED /* GameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1E7CEC819E74CA900FA72ED /* GameScene.cpp */; };
+		E1E7CEDF19E74CA900FA72ED /* BaseDialog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1E7CECB19E74CA900FA72ED /* BaseDialog.cpp */; };
+		E1E7CEE019E74CA900FA72ED /* BaseDialog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1E7CECB19E74CA900FA72ED /* BaseDialog.cpp */; };
+		E1E7CEE119E74CA900FA72ED /* ConfigDialog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1E7CECD19E74CA900FA72ED /* ConfigDialog.cpp */; };
+		E1E7CEE219E74CA900FA72ED /* ConfigDialog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1E7CECD19E74CA900FA72ED /* ConfigDialog.cpp */; };
+		E1E7CEE319E74CA900FA72ED /* InfoDialog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1E7CECF19E74CA900FA72ED /* InfoDialog.cpp */; };
+		E1E7CEE419E74CA900FA72ED /* InfoDialog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1E7CECF19E74CA900FA72ED /* InfoDialog.cpp */; };
+		E1E7CEE519E74CA900FA72ED /* PlayerDialog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1E7CED119E74CA900FA72ED /* PlayerDialog.cpp */; };
+		E1E7CEE619E74CA900FA72ED /* PlayerDialog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1E7CED119E74CA900FA72ED /* PlayerDialog.cpp */; };
+		E1E7CEE719E74CA900FA72ED /* GameMenuScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1E7CED319E74CA900FA72ED /* GameMenuScene.cpp */; };
+		E1E7CEE819E74CA900FA72ED /* GameMenuScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1E7CED319E74CA900FA72ED /* GameMenuScene.cpp */; };
+		E1E7CEE919E74CA900FA72ED /* UnitPlayingScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1E7CED619E74CA900FA72ED /* UnitPlayingScene.cpp */; };
+		E1E7CEEA19E74CA900FA72ED /* UnitPlayingScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1E7CED619E74CA900FA72ED /* UnitPlayingScene.cpp */; };
+		E1E7CEEB19E74CA900FA72ED /* UnitSelectionScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1E7CED919E74CA900FA72ED /* UnitSelectionScene.cpp */; };
+		E1E7CEEC19E74CA900FA72ED /* UnitSelectionScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1E7CED919E74CA900FA72ED /* UnitSelectionScene.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -155,17 +169,31 @@
 		D44C620D132DFF430009C878 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D44C620F132DFF4E0009C878 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		D6B0611A1803AB670077942B /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
-		E10CFDB219E17C5000572C90 /* GameMenuScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameMenuScene.cpp; sourceTree = "<group>"; };
-		E10CFDB319E17C5000572C90 /* GameMenuScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameMenuScene.h; sourceTree = "<group>"; };
 		E17D14FB19E5E59F00817633 /* Statix.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Statix.ttf; sourceTree = "<group>"; };
 		E17D14FC19E5E59F00817633 /* Tenby-Five.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tenby-Five.otf"; sourceTree = "<group>"; };
 		E17D14FE19E5E59F00817633 /* Background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Background.jpg; sourceTree = "<group>"; };
 		E17D14FF19E5E59F00817633 /* ButtonBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonBackground.png; sourceTree = "<group>"; };
 		E17D150019E5E59F00817633 /* ButtonConfig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonConfig.png; sourceTree = "<group>"; };
 		E17D150119E5E59F00817633 /* ButtonInformation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonInformation.png; sourceTree = "<group>"; };
-		E1BC775619E115300053EBB0 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
-		E1BC775719E117D00053EBB0 /* BaseScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BaseScene.cpp; sourceTree = "<group>"; };
-		E1BC775819E117D00053EBB0 /* BaseScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseScene.h; sourceTree = "<group>"; };
+		E1E7CEC519E74CA900FA72ED /* BaseScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BaseScene.cpp; sourceTree = "<group>"; };
+		E1E7CEC619E74CA900FA72ED /* BaseScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseScene.h; sourceTree = "<group>"; };
+		E1E7CEC719E74CA900FA72ED /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		E1E7CEC819E74CA900FA72ED /* GameScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameScene.cpp; sourceTree = "<group>"; };
+		E1E7CEC919E74CA900FA72ED /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
+		E1E7CECB19E74CA900FA72ED /* BaseDialog.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BaseDialog.cpp; sourceTree = "<group>"; };
+		E1E7CECC19E74CA900FA72ED /* BaseDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseDialog.h; sourceTree = "<group>"; };
+		E1E7CECD19E74CA900FA72ED /* ConfigDialog.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ConfigDialog.cpp; sourceTree = "<group>"; };
+		E1E7CECE19E74CA900FA72ED /* ConfigDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigDialog.h; sourceTree = "<group>"; };
+		E1E7CECF19E74CA900FA72ED /* InfoDialog.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = InfoDialog.cpp; sourceTree = "<group>"; };
+		E1E7CED019E74CA900FA72ED /* InfoDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoDialog.h; sourceTree = "<group>"; };
+		E1E7CED119E74CA900FA72ED /* PlayerDialog.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlayerDialog.cpp; sourceTree = "<group>"; };
+		E1E7CED219E74CA900FA72ED /* PlayerDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerDialog.h; sourceTree = "<group>"; };
+		E1E7CED319E74CA900FA72ED /* GameMenuScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameMenuScene.cpp; sourceTree = "<group>"; };
+		E1E7CED419E74CA900FA72ED /* GameMenuScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameMenuScene.h; sourceTree = "<group>"; };
+		E1E7CED619E74CA900FA72ED /* UnitPlayingScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UnitPlayingScene.cpp; sourceTree = "<group>"; };
+		E1E7CED719E74CA900FA72ED /* UnitPlayingScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitPlayingScene.h; sourceTree = "<group>"; };
+		E1E7CED919E74CA900FA72ED /* UnitSelectionScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UnitSelectionScene.cpp; sourceTree = "<group>"; };
+		E1E7CEDA19E74CA900FA72ED /* UnitSelectionScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitSelectionScene.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -292,12 +320,14 @@
 		46880B8319C43A87006E1F66 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				E10CFDB119E17C5000572C90 /* GameMenu */,
+				E1E7CEC419E74CA900FA72ED /* Common */,
+				E1E7CECA19E74CA900FA72ED /* Dialogs */,
+				E1E7CED519E74CA900FA72ED /* Playing */,
+				E1E7CED819E74CA900FA72ED /* Selection */,
 				46880B8419C43A87006E1F66 /* AppDelegate.cpp */,
 				46880B8519C43A87006E1F66 /* AppDelegate.h */,
-				E1BC775719E117D00053EBB0 /* BaseScene.cpp */,
-				E1BC775819E117D00053EBB0 /* BaseScene.h */,
-				E1BC775619E115300053EBB0 /* Common.h */,
+				E1E7CED319E74CA900FA72ED /* GameMenuScene.cpp */,
+				E1E7CED419E74CA900FA72ED /* GameMenuScene.h */,
 			);
 			name = Classes;
 			path = ../Classes;
@@ -348,15 +378,6 @@
 			path = ios;
 			sourceTree = SOURCE_ROOT;
 		};
-		E10CFDB119E17C5000572C90 /* GameMenu */ = {
-			isa = PBXGroup;
-			children = (
-				E10CFDB219E17C5000572C90 /* GameMenuScene.cpp */,
-				E10CFDB319E17C5000572C90 /* GameMenuScene.h */,
-			);
-			path = GameMenu;
-			sourceTree = "<group>";
-		};
 		E17D14FA19E5E59F00817633 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -375,6 +396,51 @@
 				E17D150119E5E59F00817633 /* ButtonInformation.png */,
 			);
 			path = GameMenu;
+			sourceTree = "<group>";
+		};
+		E1E7CEC419E74CA900FA72ED /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				E1E7CEC719E74CA900FA72ED /* Common.h */,
+				E1E7CEC519E74CA900FA72ED /* BaseScene.cpp */,
+				E1E7CEC619E74CA900FA72ED /* BaseScene.h */,
+				E1E7CEC819E74CA900FA72ED /* GameScene.cpp */,
+				E1E7CEC919E74CA900FA72ED /* GameScene.h */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		E1E7CECA19E74CA900FA72ED /* Dialogs */ = {
+			isa = PBXGroup;
+			children = (
+				E1E7CECB19E74CA900FA72ED /* BaseDialog.cpp */,
+				E1E7CECC19E74CA900FA72ED /* BaseDialog.h */,
+				E1E7CECD19E74CA900FA72ED /* ConfigDialog.cpp */,
+				E1E7CECE19E74CA900FA72ED /* ConfigDialog.h */,
+				E1E7CECF19E74CA900FA72ED /* InfoDialog.cpp */,
+				E1E7CED019E74CA900FA72ED /* InfoDialog.h */,
+				E1E7CED119E74CA900FA72ED /* PlayerDialog.cpp */,
+				E1E7CED219E74CA900FA72ED /* PlayerDialog.h */,
+			);
+			path = Dialogs;
+			sourceTree = "<group>";
+		};
+		E1E7CED519E74CA900FA72ED /* Playing */ = {
+			isa = PBXGroup;
+			children = (
+				E1E7CED619E74CA900FA72ED /* UnitPlayingScene.cpp */,
+				E1E7CED719E74CA900FA72ED /* UnitPlayingScene.h */,
+			);
+			path = Playing;
+			sourceTree = "<group>";
+		};
+		E1E7CED819E74CA900FA72ED /* Selection */ = {
+			isa = PBXGroup;
+			children = (
+				E1E7CED919E74CA900FA72ED /* UnitSelectionScene.cpp */,
+				E1E7CEDA19E74CA900FA72ED /* UnitSelectionScene.h */,
+			);
+			path = Selection;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -527,12 +593,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1E7CEE519E74CA900FA72ED /* PlayerDialog.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
+				E1E7CEEB19E74CA900FA72ED /* UnitSelectionScene.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
-				E1BC775919E117D00053EBB0 /* BaseScene.cpp in Sources */,
-				E10CFDB419E17C5000572C90 /* GameMenuScene.cpp in Sources */,
+				E1E7CEDB19E74CA900FA72ED /* BaseScene.cpp in Sources */,
+				E1E7CEE319E74CA900FA72ED /* InfoDialog.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
+				E1E7CEDD19E74CA900FA72ED /* GameScene.cpp in Sources */,
+				E1E7CEE719E74CA900FA72ED /* GameMenuScene.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
+				E1E7CEDF19E74CA900FA72ED /* BaseDialog.cpp in Sources */,
+				E1E7CEE119E74CA900FA72ED /* ConfigDialog.cpp in Sources */,
+				E1E7CEE919E74CA900FA72ED /* UnitPlayingScene.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -540,10 +613,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1E7CEEC19E74CA900FA72ED /* UnitSelectionScene.cpp in Sources */,
+				E1E7CEE019E74CA900FA72ED /* BaseDialog.cpp in Sources */,
+				E1E7CEE419E74CA900FA72ED /* InfoDialog.cpp in Sources */,
+				E1E7CEDC19E74CA900FA72ED /* BaseScene.cpp in Sources */,
 				46880B8919C43A87006E1F66 /* AppDelegate.cpp in Sources */,
+				E1E7CEE219E74CA900FA72ED /* ConfigDialog.cpp in Sources */,
+				E1E7CEDE19E74CA900FA72ED /* GameScene.cpp in Sources */,
+				E1E7CEE819E74CA900FA72ED /* GameMenuScene.cpp in Sources */,
+				E1E7CEEA19E74CA900FA72ED /* UnitPlayingScene.cpp in Sources */,
+				E1E7CEE619E74CA900FA72ED /* PlayerDialog.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
-				E1BC775A19E117D00053EBB0 /* BaseScene.cpp in Sources */,
-				E10CFDB519E17C5000572C90 /* GameMenuScene.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

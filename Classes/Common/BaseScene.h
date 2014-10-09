@@ -1,7 +1,7 @@
 #ifndef BASESCENE_H
 #define BASESCENE_H
 
-#include <cocos2d.h>
+#include "Common.h"
 
 #define CREATE_SCENE(ChildClass) \
 static cocos2d::Scene* createScene() \

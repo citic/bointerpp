@@ -5,8 +5,9 @@
 
 class BaseDialog : public BaseScene
 {
-public:
-	BaseDialog();
+  public:
+	/// Constructor
+	explicit BaseDialog(const std::string& sceneName);
 };
 
 #endif // BASEDIALOG_H

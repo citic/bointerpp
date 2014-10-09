@@ -1,5 +1,5 @@
-#ifndef __HELLOWORLD_SCENE_H__
-#define __HELLOWORLD_SCENE_H__
+#ifndef GameMenuScene_h
+#define GameMenuScene_h
 
 #include "BaseScene.h"
 
@@ -36,4 +36,4 @@ class GameMenuScene : public BaseScene
 	void menuBuildingPressed(cocos2d::Ref* pSender);
 };
 
-#endif // __HELLOWORLD_SCENE_H__
+#endif // GameMenuScene_h
