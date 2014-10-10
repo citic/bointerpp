@@ -57,7 +57,7 @@ void GameMenuScene::createMenuItem(size_t pos, const std::string& text, const cc
 void GameMenuScene::createBackButton()
 {
 #if PLATFORM_PC
-	auto closeItem = MenuItemImage::create("CloseNormal.png", "CloseSelected.png", CC_CALLBACK_1(GameMenuScene::menuCloseCallback, this));
+	auto closeItem = MenuItemImage::create("CloseNormal.png", "CloseSelected.png", CC_CALLBACK_1(GameMenuScene::buttonExitPressed, this));
 	float x = leftX() + closeItem->getContentSize().width * 0.5f;
 	float y = topY() - closeItem->getContentSize().height * 0.5f;
 	closeItem->setPosition(Vec2(x, y));
@@ -81,12 +81,12 @@ void GameMenuScene::createPlayerSection()
 
 void GameMenuScene::menuTrainingPressed(Ref* pSender)
 {
-	log("Training not implemented in this version");
+	showUnitSelectionScene("Training");
 }
 
 void GameMenuScene::menuMissionsPressed(Ref* pSender)
 {
-	log("Missions not implemented in this version");
+	showUnitSelectionScene("Missions");
 }
 
 void GameMenuScene::menuCollaborationPressed(Ref* pSender)

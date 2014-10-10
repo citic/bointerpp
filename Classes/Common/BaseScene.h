@@ -36,8 +36,6 @@ class BaseScene : public cocos2d::Layer
 	explicit BaseScene(const std::string& sceneName);
 	/// Initializes the scene. This method is called before the scene is shown
 	virtual bool init();
-	/// Called when the close button is pressed
-	void menuCloseCallback(cocos2d::Ref* pSender);
 
   public: // Coordinates for common screen places
 	/// Gets the first left visible x pixel
@@ -83,8 +81,15 @@ class BaseScene : public cocos2d::Layer
 	void addMenuItem(cocos2d::MenuItem* item);
 
   public:
+	/// Called when the close button is pressed
+	void buttonExitPressed(cocos2d::Ref* pSender);
 	/// Called when the Config button is pressed
 	void buttonConfigPressed(cocos2d::Ref* pSender);
+
+  public:
+	/// Shows the unit selection scene with units from the given context
+	/// @param context the folder where units are to be loaded from: "Training" or "Missions"
+	static void showUnitSelectionScene(const std::string& context);
 };
 
 #endif // BASESCENE_H

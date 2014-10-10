@@ -59,7 +59,7 @@ bool BaseScene::init()
 	return true;
 }
 
-void BaseScene::menuCloseCallback(Ref* pSender)
+void BaseScene::buttonExitPressed(Ref* pSender)
 {
 	auto config = UserDefault::getInstance();
 	bool old = config->getBoolForKey("System/FullScreen", false);
@@ -133,3 +133,11 @@ void BaseScene::buttonConfigPressed(cocos2d::Ref* pSender)
 	log("Config dialog not implemented in this version");
 }
 
+
+#include "UnitSelectionScene.h"
+
+void BaseScene::showUnitSelectionScene(const std::string& context)
+{
+	auto scene = UnitSelectionScene::createScene(context);
+	Director::getInstance()->replaceScene(TransitionSlideInR::create(0.75f, scene));
+}
