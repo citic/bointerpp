@@ -1,4 +1,5 @@
 #include "GameScene.h"
+#include "PlayerMenuItem.h"
 
 USING_NS_CC;
 
@@ -7,6 +8,8 @@ GameScene::GameScene(const std::string& sceneName)
 	, titleBar(nullptr)
 	, backButton(nullptr)
 	, sceneTitle(nullptr)
+	, playerMenuItem(nullptr)
+	, configButton(nullptr)
 {
 }
 
@@ -18,6 +21,7 @@ void GameScene::createStandardMenu(const std::string& title)
 	createSceneTitle(title);
 	createInfoButton();
 	createConfigButton();
+	createPlayerSection();
 }
 
 void GameScene::createStandarMenuBackground()
@@ -69,20 +73,31 @@ void GameScene::createInfoButton()
 
 void GameScene::createConfigButton()
 {
-	auto button = createButton("ButtonConfig", CC_CALLBACK_1(GameScene::buttonConfigPressed, this));
-	float x = rightX() - half_width(button) - 3.0f;
-	float y = topY() - half_height(button) - 3.0f;
-	button->setPosition(Vec2(x, y));
+	configButton = createButton("ButtonConfig", CC_CALLBACK_1(GameScene::buttonConfigPressed, this));
+	float x = rightX() - half_width(configButton) - 3.0f;
+	float y = topY() - half_height(configButton) - 3.0f;
+	configButton->setPosition(Vec2(x, y));
 }
 
 void GameScene::createPlayerSection()
 {
+	playerMenuItem = PlayerMenuItem::create(CC_CALLBACK_1(GameScene::playerSectionPressed, this));
+	float x = rightX() - node_width(configButton) - half_width(playerMenuItem) - 3.0f;
+	float y = topY() - half_height(playerMenuItem) - 3.0f;
+	playerMenuItem->setPosition(Vec2(x, y));
+	addChild(playerMenuItem, zorderMiddleground);
 }
 
 void GameScene::buttonInfoPressed(cocos2d::Ref* pSender)
 {
 	log("Info dialog not implemented in this version");
 }
+
+void GameScene::playerSectionPressed(cocos2d::Ref* pSender)
+{
+	log("Player management dialog not implemented in this version");
+}
+
 
 void GameScene::buttonConfigPressed(cocos2d::Ref* pSender)
 {

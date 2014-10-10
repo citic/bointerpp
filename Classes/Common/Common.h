@@ -29,6 +29,10 @@ inline float half_height(const cocos2d::Node* node)
 	return node->getContentSize().height * 0.5f;
 }
 
+#define DECLARE_NO_COPY_CLASS(ClassName) \
+	ClassName(const ClassName&) = delete; \
+	const ClassName& operator=(const ClassName&) = delete;
+
 // Translation to user language
 #define _(STR) STR
 

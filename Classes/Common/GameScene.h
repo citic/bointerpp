@@ -3,6 +3,9 @@
 
 #include "BaseScene.h"
 
+// Forward declarations
+class PlayerMenuItem;
+
 class GameScene : public BaseScene
 {
   protected:
@@ -14,6 +17,10 @@ class GameScene : public BaseScene
 	cocos2d::MenuItemLabel* sceneTitle;
 	/// Button to show info about this scene, e.g: the task description on unit playing scene
 	cocos2d::MenuItem* infoButton;
+	/// Show info for current player
+	PlayerMenuItem* playerMenuItem;
+	/// Gear button to configure the game
+	cocos2d::MenuItem* configButton;
 
   public:
 	/// Constructor
@@ -44,6 +51,8 @@ class GameScene : public BaseScene
 	void buttonInfoPressed(cocos2d::Ref* pSender);
 	/// Called when the Config button is pressed
 	void buttonConfigPressed(cocos2d::Ref* pSender);
+	/// Called when the Player section is pressed
+	void playerSectionPressed(cocos2d::Ref* pSender);
 
   public:
 	/// Shows the unit selection scene with units from the given context

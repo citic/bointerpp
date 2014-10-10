@@ -104,6 +104,10 @@
 		E1E7CF0D19E7600B00FA72ED /* GameLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = E1E7CEFB19E7600B00FA72ED /* GameLogo.png */; };
 		E1E7CF0E19E7600B00FA72ED /* TitleBar.png in Resources */ = {isa = PBXBuildFile; fileRef = E1E7CEFC19E7600B00FA72ED /* TitleBar.png */; };
 		E1E7CF0F19E7600B00FA72ED /* TitleBar.png in Resources */ = {isa = PBXBuildFile; fileRef = E1E7CEFC19E7600B00FA72ED /* TitleBar.png */; };
+		E1E7CF1219E7F0AB00FA72ED /* PlayerMenuItem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1E7CF1019E7F0AB00FA72ED /* PlayerMenuItem.cpp */; };
+		E1E7CF1319E7F0AB00FA72ED /* PlayerMenuItem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1E7CF1019E7F0AB00FA72ED /* PlayerMenuItem.cpp */; };
+		E1E7CF1B19E8007600FA72ED /* PlayerManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1E7CF1919E8007600FA72ED /* PlayerManager.cpp */; };
+		E1E7CF1C19E8007600FA72ED /* PlayerManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1E7CF1919E8007600FA72ED /* PlayerManager.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -221,6 +225,10 @@
 		E1E7CEFA19E7600B00FA72ED /* ButtonInfoUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonInfoUp.png; sourceTree = "<group>"; };
 		E1E7CEFB19E7600B00FA72ED /* GameLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GameLogo.png; sourceTree = "<group>"; };
 		E1E7CEFC19E7600B00FA72ED /* TitleBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TitleBar.png; sourceTree = "<group>"; };
+		E1E7CF1019E7F0AB00FA72ED /* PlayerMenuItem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PlayerMenuItem.cpp; path = Players/PlayerMenuItem.cpp; sourceTree = "<group>"; };
+		E1E7CF1119E7F0AB00FA72ED /* PlayerMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayerMenuItem.h; path = Players/PlayerMenuItem.h; sourceTree = "<group>"; };
+		E1E7CF1919E8007600FA72ED /* PlayerManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PlayerManager.cpp; path = Players/PlayerManager.cpp; sourceTree = "<group>"; };
+		E1E7CF1A19E8007600FA72ED /* PlayerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayerManager.h; path = Players/PlayerManager.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -351,6 +359,7 @@
 			children = (
 				E1E7CEC419E74CA900FA72ED /* Common */,
 				E1E7CECA19E74CA900FA72ED /* Dialogs */,
+				E1E7CF1419E7F0D000FA72ED /* Players */,
 				E1E7CED519E74CA900FA72ED /* Playing */,
 				E1E7CED819E74CA900FA72ED /* Selection */,
 				46880B8419C43A87006E1F66 /* AppDelegate.cpp */,
@@ -493,6 +502,17 @@
 			children = (
 			);
 			path = UnitSelection;
+			sourceTree = "<group>";
+		};
+		E1E7CF1419E7F0D000FA72ED /* Players */ = {
+			isa = PBXGroup;
+			children = (
+				E1E7CF1919E8007600FA72ED /* PlayerManager.cpp */,
+				E1E7CF1A19E8007600FA72ED /* PlayerManager.h */,
+				E1E7CF1019E7F0AB00FA72ED /* PlayerMenuItem.cpp */,
+				E1E7CF1119E7F0AB00FA72ED /* PlayerMenuItem.h */,
+			);
+			name = Players;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -671,10 +691,12 @@
 				E1E7CEE319E74CA900FA72ED /* InfoDialog.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				E1E7CEDD19E74CA900FA72ED /* GameScene.cpp in Sources */,
+				E1E7CF1219E7F0AB00FA72ED /* PlayerMenuItem.cpp in Sources */,
 				E1E7CEE719E74CA900FA72ED /* GameMenuScene.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				E1E7CEDF19E74CA900FA72ED /* BaseDialog.cpp in Sources */,
 				E1E7CEE119E74CA900FA72ED /* ConfigDialog.cpp in Sources */,
+				E1E7CF1B19E8007600FA72ED /* PlayerManager.cpp in Sources */,
 				E1E7CEE919E74CA900FA72ED /* UnitPlayingScene.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -687,10 +709,12 @@
 				E1E7CEE019E74CA900FA72ED /* BaseDialog.cpp in Sources */,
 				E1E7CEE419E74CA900FA72ED /* InfoDialog.cpp in Sources */,
 				E1E7CEDC19E74CA900FA72ED /* BaseScene.cpp in Sources */,
+				E1E7CF1C19E8007600FA72ED /* PlayerManager.cpp in Sources */,
 				46880B8919C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				E1E7CEE219E74CA900FA72ED /* ConfigDialog.cpp in Sources */,
 				E1E7CEDE19E74CA900FA72ED /* GameScene.cpp in Sources */,
 				E1E7CEE819E74CA900FA72ED /* GameMenuScene.cpp in Sources */,
+				E1E7CF1319E7F0AB00FA72ED /* PlayerMenuItem.cpp in Sources */,
 				E1E7CEEA19E74CA900FA72ED /* UnitPlayingScene.cpp in Sources */,
 				E1E7CEE619E74CA900FA72ED /* PlayerDialog.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,

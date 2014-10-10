@@ -42,10 +42,12 @@ bool AppDelegate::applicationDidFinishLaunching()
 	// set FPS. the default value is 1.0/60 if you don't call this
 	director->setAnimationInterval(1.0 / 60.0);
 
+	// Set the default font for labels and its size
+	MenuItemFont::setFontName("Tenby-Five.otf");
+	MenuItemFont::setFontSize(12.0f);
+
 	// create a scene. it's an autorelease object
 	auto scene = GameMenuScene::createScene();
-
-	// run
 	director->runWithScene(scene);
 
 	return true;
