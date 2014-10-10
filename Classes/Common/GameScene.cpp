@@ -82,7 +82,7 @@ void GameScene::createConfigButton()
 void GameScene::createPlayerSection()
 {
 	playerMenuItem = PlayerMenuItem::create(CC_CALLBACK_1(GameScene::playerSectionPressed, this));
-	float x = rightX() - node_width(configButton) - half_width(playerMenuItem) - 3.0f;
+	float x = rightX() - node_width(configButton) - half_width(playerMenuItem) - 6.0f;
 	float y = topY() - half_height(playerMenuItem) - 3.0f;
 	playerMenuItem->setPosition(Vec2(x, y));
 	addChild(playerMenuItem, zorderMiddleground);

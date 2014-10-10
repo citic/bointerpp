@@ -29,9 +29,10 @@ bool PlayerMenuItem::initWithCallback(const ccMenuCallback& callback)
 
 	// Player name is prominent in the top of the item
 	const std::string& name = PlayerManager::getInstance()->getCurrentPlayerName();
-	MenuItemFont::setFontSize(24.0f);
+	MenuItemFont::setFontSize(16.0f);
 	playerName = MenuItemFont::create(name, _callback);
 	playerName->setColor(BaseScene::fontColor);
+	this->setContentSize(Size(node_width(playerName) + 10.0f, 40.0f));
 	playerName->setPosition(half_width(this), node_height(this) - half_height(playerName));
 	addChild(playerName);
 
