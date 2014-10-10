@@ -4,14 +4,14 @@
 USING_NS_CC;
 
 GameMenuScene::GameMenuScene()
-	: BaseScene("GameMenu")
+	: GameScene("GameMenu")
 {
 }
 
 bool GameMenuScene::init()
 {
 	// Init parent class first
-	if ( ! BaseScene::init() ) return false;
+	if ( ! GameScene::init() ) return false;
 
 	// Create scenery
 	createMenu();
@@ -77,6 +77,15 @@ void GameMenuScene::createPlayerSection()
 
 	// add the label as a child to this layer
 	this->addChild(label, 1);
+}
+
+void GameMenuScene::buttonExitPressed(Ref* pSender)
+{
+	auto config = UserDefault::getInstance();
+	bool old = config->getBoolForKey("System/FullScreen", false);
+	config->setBoolForKey("System/FullScreen", ! old);
+	config->flush();
+	Director::getInstance()->end();
 }
 
 void GameMenuScene::menuTrainingPressed(Ref* pSender)

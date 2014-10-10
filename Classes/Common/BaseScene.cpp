@@ -59,15 +59,6 @@ bool BaseScene::init()
 	return true;
 }
 
-void BaseScene::buttonExitPressed(Ref* pSender)
-{
-	auto config = UserDefault::getInstance();
-	bool old = config->getBoolForKey("System/FullScreen", false);
-	config->setBoolForKey("System/FullScreen", ! old);
-	config->flush();
-	Director::getInstance()->end();
-}
-
 void BaseScene::playMusic()
 {
 }
@@ -77,40 +68,6 @@ void BaseScene::createBackground(const char* backgroundFilename)
 	auto sprite = Sprite::create(backgroundFilename);
 	sprite->setPosition(Vec2(centerX(), centerY()));
 	this->addChild(sprite, zorderBackground);
-}
-
-void BaseScene::createStandardMenu()
-{
-	createBackButton();
-	createGameLogo();
-	createInfoButton();
-	createConfigButton();
-}
-
-void BaseScene::createBackButton()
-{
-}
-
-void BaseScene::createGameLogo()
-{
-}
-
-void BaseScene::createInfoButton()
-{
-}
-
-void BaseScene::createConfigButton()
-{
-/*
-	auto button = createButton("Config", CC_CALLBACK_1(BaseScene::buttonConfigPressed, this));
-	float x = rightX() * 0.8f;
-	float y = topY() - button->getContentSize().height * 0.5f;
-	button->setPosition(Vec2(x, y));
- */
-}
-
-void BaseScene::createPlayerSection()
-{
 }
 
 MenuItem* BaseScene::createButton(const std::string& name, const cocos2d::ccMenuCallback& callback, float x, float y)
@@ -126,18 +83,4 @@ void BaseScene::addMenuItem(MenuItem* item)
 	auto menu = Menu::create(item, NULL);
 	menu->setPosition(Vec2::ZERO);
 	this->addChild(menu, 1);
-}
-
-void BaseScene::buttonConfigPressed(cocos2d::Ref* pSender)
-{
-	log("Config dialog not implemented in this version");
-}
-
-
-#include "UnitSelectionScene.h"
-
-void BaseScene::showUnitSelectionScene(const std::string& context)
-{
-	auto scene = UnitSelectionScene::createScene(context);
-	Director::getInstance()->replaceScene(TransitionSlideInR::create(0.75f, scene));
 }

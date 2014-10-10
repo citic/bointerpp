@@ -1,9 +1,9 @@
 #ifndef GameMenuScene_h
 #define GameMenuScene_h
 
-#include "BaseScene.h"
+#include "GameScene.h"
 
-class GameMenuScene : public BaseScene
+class GameMenuScene : public GameScene
 {
   public:
 	/// Default Constructor
@@ -26,6 +26,8 @@ class GameMenuScene : public BaseScene
 	virtual void createPlayerSection();
 
   public: // Call back functions
+	/// Called when the close button is pressed
+	void buttonExitPressed(cocos2d::Ref* pSender);
 	/// Called when the Training button/menu item is pressed
 	void menuTrainingPressed(cocos2d::Ref* pSender);
 	/// Called when the Training button/menu item is pressed
