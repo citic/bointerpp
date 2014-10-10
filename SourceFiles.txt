@@ -1,0 +1,25 @@
+set(COMMON_SRC
+    Classes/Common/GameScene.cpp
+    Classes/Common/BaseScene.cpp
+    Classes/GameMenuScene.cpp
+    Classes/Dialogs/InfoDialog.cpp
+    Classes/Dialogs/ConfigDialog.cpp
+    Classes/Dialogs/BaseDialog.cpp
+    Classes/Dialogs/PlayerDialog.cpp
+    Classes/Playing/UnitPlayingScene.cpp
+    Classes/Selection/UnitSelectionScene.cpp
+    Classes/AppDelegate.cpp
+    Classes/Players/PlayerManager.cpp
+    Classes/Players/PlayerMenuItem.cpp
+)
+
+set(COMMON_INCLUDE
+    ${CMAKE_SOURCE_DIR}/Classes
+    ${CMAKE_SOURCE_DIR}/Classes/Collaboration
+    ${CMAKE_SOURCE_DIR}/Classes/Common
+    ${CMAKE_SOURCE_DIR}/Classes/Building
+    ${CMAKE_SOURCE_DIR}/Classes/Dialogs
+    ${CMAKE_SOURCE_DIR}/Classes/Playing
+    ${CMAKE_SOURCE_DIR}/Classes/Selection
+    ${CMAKE_SOURCE_DIR}/Classes/Players
+)
