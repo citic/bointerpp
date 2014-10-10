@@ -18,8 +18,8 @@ class BaseScene : public cocos2d::Layer
   public: // Data types and constants
 	/// Constants used to distinguish the z-order of sprites in the same layer
 	static const int zorderBackground = 0;
-	static const int zorderMiddleground = 1;
-	static const int zorderForeground = 2;
+	static const int zorderMiddleground = 10;
+	static const int zorderForeground = 20;
 	/// Color for fonts
 	static const cocos2d::Color3B fontColor;
 

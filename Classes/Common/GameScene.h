@@ -12,6 +12,8 @@ class GameScene : public BaseScene
   protected: // Title bar: menu in game
 	/// Creates a standard menu with common buttons: configure, back/exit, player...
 	virtual void createStandardMenu();
+	/// Creates and places the background for the standar menu
+	virtual void createStandarMenuBackground();
 	/// Creates the button to return to the level selection scene or game menu
 	virtual void createBackButton();
 	/// Shows the game logo in the menu of the game
@@ -24,6 +26,8 @@ class GameScene : public BaseScene
 	virtual void createPlayerSection();
 
   public:
+	/// Called when the Back button is pressed
+	virtual void buttonBackPressed(cocos2d::Ref* pSender) = 0;
 	/// Called when the Config button is pressed
 	void buttonConfigPressed(cocos2d::Ref* pSender);
 
@@ -31,6 +35,8 @@ class GameScene : public BaseScene
 	/// Shows the unit selection scene with units from the given context
 	/// @param context the folder where units are to be loaded from: "Training" or "Missions"
 	static void showUnitSelectionScene(const std::string& context);
+	/// Shows the game menu scene
+	static void showGameMenuScene();
 };
 
 #endif // GAMESCENE_H

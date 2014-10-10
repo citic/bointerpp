@@ -19,6 +19,10 @@ class UnitSelectionScene : public GameScene
 	static UnitSelectionScene* createWithContext(const std::string& context);
 	/// Initializes the scene. This method is called before the scene is shown
 	virtual bool init();
+
+  public:
+	/// Called when the Back button is pressed
+	virtual void buttonBackPressed(cocos2d::Ref* pSender) { showGameMenuScene(); }
 };
 
 #endif // UNITSELECTIONSCENE_H

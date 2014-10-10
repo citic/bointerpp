@@ -26,8 +26,8 @@ class GameMenuScene : public GameScene
 	virtual void createPlayerSection();
 
   public: // Call back functions
-	/// Called when the close button is pressed
-	void buttonExitPressed(cocos2d::Ref* pSender);
+	/// Called when the Back button is pressed (exit the game)
+	virtual void buttonBackPressed(cocos2d::Ref* pSender);
 	/// Called when the Training button/menu item is pressed
 	void menuTrainingPressed(cocos2d::Ref* pSender);
 	/// Called when the Training button/menu item is pressed

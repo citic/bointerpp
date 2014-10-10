@@ -9,6 +9,26 @@
 
 #define PLATFORM_MOBILE ((CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID) || (CC_TARGET_PLATFORM == CC_PLATFORM_IOS) || (CC_TARGET_PLATFORM == CC_PLATFORM_WP8))
 
+inline float node_width(const cocos2d::Node* node)
+{
+	return node->getContentSize().width;
+}
+
+inline float node_height(const cocos2d::Node* node)
+{
+	return node->getContentSize().height;
+}
+
+inline float half_width(const cocos2d::Node* node)
+{
+	return node->getContentSize().width * 0.5f;
+}
+
+inline float half_height(const cocos2d::Node* node)
+{
+	return node->getContentSize().height * 0.5f;
+}
+
 // Translation to user language
 #define _(STR) STR
 
