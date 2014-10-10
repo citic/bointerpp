@@ -82,5 +82,5 @@ void BaseScene::addMenuItem(MenuItem* item)
 {
 	auto menu = Menu::create(item, NULL);
 	menu->setPosition(Vec2::ZERO);
-	this->addChild(menu, 1);
+	this->addChild(menu, zorderMiddleground);
 }

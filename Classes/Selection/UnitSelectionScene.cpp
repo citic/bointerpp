@@ -34,7 +34,7 @@ bool UnitSelectionScene::init()
 	if ( ! BaseScene::init() ) return false;
 
 	// Create scenery
-	createStandardMenu();
+	createStandardMenu(context);
 
 	// Done
 	return true;
