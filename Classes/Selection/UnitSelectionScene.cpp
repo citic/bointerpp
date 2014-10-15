@@ -33,10 +33,26 @@ bool UnitSelectionScene::init()
 	// Init parent class first
 	if ( ! BaseScene::init() ) return false;
 
+	auto fileUtils = FileUtils::getInstance();
+	fileUtils->addSearchPath(context);
+
 	// Create scenery
 	createStandardMenu(context);
+	createUnits();
+	animatePods();
 
 	// Done
 	return true;
 }
 
+bool UnitSelectionScene::createUnits()
+{
+	if ( ! unitManager.load(context) ) return false;
+
+	return true;
+}
+
+bool UnitSelectionScene::animatePods()
+{
+	return true;
+}

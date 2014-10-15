@@ -2,6 +2,7 @@
 #define UNITSELECTIONSCENE_H
 
 #include "GameScene.h"
+#include "UnitManager.h"
 
 class UnitSelectionScene : public GameScene
 {
@@ -9,6 +10,8 @@ class UnitSelectionScene : public GameScene
 	/// The context where the units are found. It is a folder where units are to be loaded from
 	/// "Training" or "Missions"
 	std::string context;
+	/// Loads the unit list for the given context
+	UnitManager unitManager;
 
   public:
 	/// Default constructor
@@ -23,6 +26,12 @@ class UnitSelectionScene : public GameScene
   public:
 	/// Called when the Back button is pressed
 	virtual void buttonBackPressed(cocos2d::Ref* pSender) { showGameMenuScene(); }
+
+  protected:
+	/// Load and create a chips for each unit (game level)
+	bool createUnits();
+	/// Animate some air tube carriers/pods representing information flow
+	bool animatePods();
 };
 
 #endif // UNITSELECTIONSCENE_H
