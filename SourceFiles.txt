@@ -1,4 +1,5 @@
 set(COMMON_SRC
+    Classes/Common/Common.cpp
     Classes/Common/GameScene.cpp
     Classes/Common/BaseScene.cpp
     Classes/GameMenuScene.cpp
@@ -7,6 +8,7 @@ set(COMMON_SRC
     Classes/Dialogs/BaseDialog.cpp
     Classes/Dialogs/PlayerDialog.cpp
     Classes/Playing/UnitPlayingScene.cpp
+    Classes/Selection/UnitManager.cpp
     Classes/Selection/UnitSelectionScene.cpp
     Classes/AppDelegate.cpp
     Classes/Players/PlayerManager.cpp

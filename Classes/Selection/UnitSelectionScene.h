@@ -29,9 +29,13 @@ class UnitSelectionScene : public GameScene
 
   protected:
 	/// Load and create a chips for each unit (game level)
-	bool createUnits();
+	bool createLevelsUnits();
 	/// Animate some air tube carriers/pods representing information flow
 	bool animatePods();
+	/// Create a line of chips for the given level
+	void createLevel(size_t levelIndex, const UnitLevel& level);
+	/// Create a chip for the given unit
+	void createUnit(size_t levelIndex, size_t unitIndex, const std::string& filename);
 };
 
 #endif // UNITSELECTIONSCENE_H

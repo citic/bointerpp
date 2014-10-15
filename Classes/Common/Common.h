@@ -36,4 +36,6 @@ inline float half_height(const cocos2d::Node* node)
 // Translation to user language
 #define _(STR) STR
 
+bool eprintf(const char * format, ...);
+
 #endif
