@@ -112,17 +112,18 @@ void GameScene::buttonConfigPressed(cocos2d::Ref* pSender)
 void GameScene::showGameMenuScene()
 {
 	auto scene = GameMenuScene::createScene();
-	Director::getInstance()->replaceScene(TransitionSlideInL::create(0.75f, scene));
+	Director::getInstance()->replaceScene(TransitionSlideInL::create(0.66f, scene));
 }
 
-void GameScene::showUnitSelectionScene(const std::string& context)
+void GameScene::showUnitSelectionScene(const std::string& context, bool forward)
 {
 	auto scene = UnitSelectionScene::createScene(context);
-	Director::getInstance()->replaceScene(TransitionSlideInR::create(0.75f, scene));
+	auto transition = forward ? TransitionSlideInR::create(0.66f, scene) : TransitionSlideInL::create(0.75f, scene);
+	Director::getInstance()->replaceScene(transition);
 }
 
 void GameScene::showUnitPlayingScene(const std::string& context, const std::string& unitName)
 {
 	auto scene = UnitPlayingScene::createScene(context, unitName);
-	Director::getInstance()->replaceScene(TransitionSlideInR::create(0.75f, scene));
+	Director::getInstance()->replaceScene(TransitionSlideInR::create(0.66f, scene));
 }

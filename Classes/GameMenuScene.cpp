@@ -88,12 +88,12 @@ void GameMenuScene::buttonBackPressed(Ref* pSender)
 
 void GameMenuScene::menuTrainingPressed(Ref* pSender)
 {
-	showUnitSelectionScene("Training");
+	showUnitSelectionScene("Training", true);
 }
 
 void GameMenuScene::menuMissionsPressed(Ref* pSender)
 {
-	showUnitSelectionScene("Missions");
+	showUnitSelectionScene("Missions", true);
 }
 
 void GameMenuScene::menuCollaborationPressed(Ref* pSender)

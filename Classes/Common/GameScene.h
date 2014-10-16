@@ -59,7 +59,9 @@ class GameScene : public BaseScene
 	static void showGameMenuScene();
 	/// Shows the unit selection scene with units from the given context
 	/// @param context The folder where units are to be loaded from: "Training" or "Missions"
-	static void showUnitSelectionScene(const std::string& context);
+	/// @param forward Send true if changing from game menu to unit selection, false if
+	/// switching from unit playing to unit selection scene
+	static void showUnitSelectionScene(const std::string& context, bool forward);
 	/// Shows the unit playing scene for the given unit (challenge)
 	/// @param context The folder where units are to be loaded from: "Training" or "Missions"
 	/// @param unitName The name of the unit to play, e.g: "sum_xy"

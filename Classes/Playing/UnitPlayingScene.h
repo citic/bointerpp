@@ -24,7 +24,7 @@ class UnitPlayingScene : public GameScene
 
   public:
 	/// Called when the Back button is pressed
-	virtual void buttonBackPressed(cocos2d::Ref* sender) { showUnitSelectionScene(context); }
+	virtual void buttonBackPressed(cocos2d::Ref* sender) { showUnitSelectionScene(context, false); }
 };
 
 #endif // UNITPLAYINGSCENE_H
