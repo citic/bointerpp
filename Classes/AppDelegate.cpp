@@ -43,7 +43,7 @@ bool AppDelegate::applicationDidFinishLaunching()
 	director->setAnimationInterval(1.0 / 60.0);
 
 	// Set the default font for labels and its size
-	MenuItemFont::setFontName("Tenby-Five.otf");
+	MenuItemFont::setFontName(BaseScene::defaultFont);
 	MenuItemFont::setFontSize(12.0f);
 
 	// create a scene. it's an autorelease object

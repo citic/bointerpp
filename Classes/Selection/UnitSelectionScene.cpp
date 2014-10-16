@@ -71,10 +71,35 @@ void UnitSelectionScene::createLevel(size_t levelIndex, const UnitLevel& level)
 void UnitSelectionScene::createUnit(size_t levelIndex, size_t unitIndex, const std::string& filename)
 {
 	log("%zu-%zu: %s", levelIndex + 1, unitIndex + 1, filename.c_str());
+
+	auto button = Sprite::create("ChipDamaged.png");
+	auto menuItem = MenuItemLabel::create(button, CC_CALLBACK_1(UnitSelectionScene::unitPressed, this));
+
+	// Place the button in the right place using the pos index
+	float x = leftX() + node_width(menuItem) * 1.5f * (unitIndex + 1);
+	float y = topY() - (levelIndex + 1) * node_height(menuItem) * 1.25f;
+	menuItem->setPosition(Vec2(x, y));
+
+	// Create the label and center it inside the button sprite
+	char text[32];
+	sprintf(text, "%zu-%zu", levelIndex + 1, unitIndex + 1);
+	TTFConfig config(defaultFont, 38.0f);
+	auto label = Label::createWithTTF(config, text);
+	label->setColor(fontColor);
+	button->addChild(label);
+	label->setPosition(Vec2(half_width(button), half_height(button)));
+
+	// Create the menu and add the menu item as a child
+	addMenuItem(menuItem);
 }
 
 
 bool UnitSelectionScene::animatePods()
 {
 	return true;
+}
+
+void UnitSelectionScene::unitPressed(Ref* pSender)
+{
+	log("an unit was selected");
 }

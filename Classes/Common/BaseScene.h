@@ -22,6 +22,8 @@ class BaseScene : public cocos2d::Layer
 	static const int zorderForeground = 20;
 	/// Color for fonts
 	static const cocos2d::Color3B fontColor;
+	/// Default game font
+	static const char* const defaultFont;
 
   protected:
 	/// Each scene has a unique identifier

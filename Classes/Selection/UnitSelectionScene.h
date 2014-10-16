@@ -26,6 +26,8 @@ class UnitSelectionScene : public GameScene
   public:
 	/// Called when the Back button is pressed
 	virtual void buttonBackPressed(cocos2d::Ref* pSender) { showGameMenuScene(); }
+	/// Called when an unit is selected
+	void unitPressed(cocos2d::Ref* pSender);
 
   protected:
 	/// Load and create a chips for each unit (game level)

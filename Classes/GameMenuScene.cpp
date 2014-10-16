@@ -42,7 +42,7 @@ void GameMenuScene::createMenuItem(size_t pos, const std::string& text, const cc
 	menuItem->setPosition(Vec2(x, y));
 
 	// Create the label and center it inside the button sprite
-	TTFConfig config("Tenby-Five.otf", 38.0f);
+	TTFConfig config(defaultFont, 38.0f);
 	auto label = Label::createWithTTF(config, text);
 	label->setColor(fontColor);
 	button->addChild(label);

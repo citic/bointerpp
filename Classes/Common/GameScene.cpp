@@ -51,7 +51,7 @@ void GameScene::createGameLogo()
 void GameScene::createSceneTitle(const std::string& title)
 {
 	// Create the label and center it inside the button sprite
-	TTFConfig config("Tenby-Five.otf", 38.0f);
+	TTFConfig config(defaultFont, 38.0f);
 	auto label = Label::createWithTTF(config, title);
 	label->setColor(fontColor);
 

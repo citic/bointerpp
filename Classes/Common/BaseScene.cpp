@@ -3,6 +3,7 @@
 USING_NS_CC;
 
 const Color3B BaseScene::fontColor = Color3B(104, 207, 209);
+const char* const BaseScene::defaultFont = "Tenby-Five.otf";
 
 BaseScene::BaseScene(const std::string& sceneName)
 	: sceneName(sceneName)
