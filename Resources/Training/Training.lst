@@ -1,7 +1,7 @@
 intro:
-sum_xy.xml
-abs_diff.xml
-average_n.xml
+sum_xy
+abs_diff
+average_n
 
 dyn_mem:
-median.xml
+median

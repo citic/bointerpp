@@ -27,13 +27,13 @@ bool UnitManager::loadLine(const std::string& line)
 {
 	// A file extract may be:
 
-	// intro:            <-- level 1
-	// sum_xy.xml        <-- unit 1-1
-	// abs_diff.xml      <-- unit 1-2
-	// average_n.xml     <-- unit 1-3
+	// intro:        <-- level 1
+	// sum_xy        <-- unit 1-1
+	// abs_diff      <-- unit 1-2
+	// average_n     <-- unit 1-3
 	//
-	// dyn_mem:          <-- level 2
-	// median.xml        <-- unit 2-1
+	// dyn_mem:      <-- level 2
+	// median        <-- unit 2-1
 
 	// Levels ends with :
 	if ( line[ line.length() - 1] == ':' )

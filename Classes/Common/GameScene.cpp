@@ -107,6 +107,7 @@ void GameScene::buttonConfigPressed(cocos2d::Ref* pSender)
 
 #include "GameMenuScene.h"
 #include "UnitSelectionScene.h"
+#include "UnitPlayingScene.h"
 
 void GameScene::showGameMenuScene()
 {
@@ -117,5 +118,11 @@ void GameScene::showGameMenuScene()
 void GameScene::showUnitSelectionScene(const std::string& context)
 {
 	auto scene = UnitSelectionScene::createScene(context);
+	Director::getInstance()->replaceScene(TransitionSlideInR::create(0.75f, scene));
+}
+
+void GameScene::showUnitPlayingScene(const std::string& context, const std::string& unitName)
+{
+	auto scene = UnitPlayingScene::createScene(context, unitName);
 	Director::getInstance()->replaceScene(TransitionSlideInR::create(0.75f, scene));
 }

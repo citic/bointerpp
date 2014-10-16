@@ -12,6 +12,8 @@ class UnitSelectionScene : public GameScene
 	std::string context;
 	/// Loads the unit list for the given context
 	UnitManager unitManager;
+	/// Pointers to all buttons on the screen
+	std::vector<cocos2d::MenuItemLabel*> menuItems;
 
   public:
 	/// Default constructor
@@ -27,7 +29,7 @@ class UnitSelectionScene : public GameScene
 	/// Called when the Back button is pressed
 	virtual void buttonBackPressed(cocos2d::Ref* pSender) { showGameMenuScene(); }
 	/// Called when an unit is selected
-	void unitPressed(cocos2d::Ref* pSender);
+	void unitPressed(cocos2d::Ref* sender);
 
   protected:
 	/// Load and create a chips for each unit (game level)

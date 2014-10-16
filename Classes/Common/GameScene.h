@@ -55,11 +55,15 @@ class GameScene : public BaseScene
 	void playerSectionPressed(cocos2d::Ref* pSender);
 
   public:
-	/// Shows the unit selection scene with units from the given context
-	/// @param context the folder where units are to be loaded from: "Training" or "Missions"
-	static void showUnitSelectionScene(const std::string& context);
 	/// Shows the game menu scene
 	static void showGameMenuScene();
+	/// Shows the unit selection scene with units from the given context
+	/// @param context The folder where units are to be loaded from: "Training" or "Missions"
+	static void showUnitSelectionScene(const std::string& context);
+	/// Shows the unit playing scene for the given unit (challenge)
+	/// @param context The folder where units are to be loaded from: "Training" or "Missions"
+	/// @param unitName The name of the unit to play, e.g: "sum_xy"
+	static void showUnitPlayingScene(const std::string& context, const std::string& unitName);
 };
 
 #endif // GAMESCENE_H

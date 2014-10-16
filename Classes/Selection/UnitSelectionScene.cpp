@@ -89,6 +89,9 @@ void UnitSelectionScene::createUnit(size_t levelIndex, size_t unitIndex, const s
 	button->addChild(label);
 	label->setPosition(Vec2(half_width(button), half_height(button)));
 
+	menuItem->setName(filename);
+	menuItems.push_back(menuItem);
+
 	// Create the menu and add the menu item as a child
 	addMenuItem(menuItem);
 }
@@ -99,7 +102,10 @@ bool UnitSelectionScene::animatePods()
 	return true;
 }
 
-void UnitSelectionScene::unitPressed(Ref* pSender)
+void UnitSelectionScene::unitPressed(Ref* sender)
 {
-	log("an unit was selected");
+	for (size_t i = 0; i < menuItems.size(); ++i )
+		if ( menuItems[i] == sender )
+			showUnitPlayingScene(context, menuItems[i]->getName());
+			// log("Unit %s was selected", menuItems[i]->getName().c_str() );
 }
